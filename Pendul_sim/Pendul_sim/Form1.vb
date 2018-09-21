@@ -33,8 +33,8 @@
     'Sætter alle fysiske størrelser på plads for lod, snor og transformation
     Private Sub LodStart()
         SaetTransformationsVariabler(True, XveV, XveH, YveB, YveT, XviV, XviH, YviB, YviT)
-        Dim P1 As PointF 'Til mellemregninger
-        Dim P2 As PointF
+        Dim P1 As Point  'Til mellemregninger
+        Dim P2 As Point
         'Sæt startposition af snor endepunkter (Snor står vandret)
         P1.X = XVerdenToVin(0)
         P1.Y = YVerdenToVin(0)
