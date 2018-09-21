@@ -57,14 +57,14 @@
     'Beregner loddets X-pos ud fra vinklen, når snorens startpunkt ligger i (0,0)
     Private Function BeregnX(V As Single) As Single
         Dim X As Single = 0
-        'X = ?
+        X = Math.Sin(ThetaX) * Lsnor
         Return X
     End Function
 
     'Beregner loddets Y-pos ud fra vinklen, når snorens startpunkt ligger i (0,0)
     Private Function BeregnY(V As Single) As Single
         Dim Y As Single = 0
-        'Y = ?
+        Y = Math.Cos(ThetaX) * -Lsnor
         Return Y
     End Function
 
