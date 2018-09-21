@@ -21,8 +21,7 @@
     Const OmegaStart As Single = 0
     'Fysiske størrelser
     Const RLod As Single = 5   'cm
-    Const Lsnor As Single = 40 'cm
-    Const LsnorM As Single = Lsnor / 100 'm
+    Const Lsnor As Single = 1 'm
     Const g As Single = 9.82   'm/s2
     Const ThetaMax As Single = 0.5 'Radianer
     'Variable til timeren
