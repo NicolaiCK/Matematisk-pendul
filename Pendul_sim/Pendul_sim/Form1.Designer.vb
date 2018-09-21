@@ -95,7 +95,7 @@ Partial Class Form1
         '
         Me.shpLod.Location = New System.Drawing.Point(432, 185)
         Me.shpLod.Name = "shpLod"
-        Me.shpLod.Size = New System.Drawing.Size(75, 70)
+        Me.shpLod.Size = New System.Drawing.Size(50, 50)
         '
         'TimerExact
         '
