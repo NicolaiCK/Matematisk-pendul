@@ -111,11 +111,12 @@
 
     'Sætter startværdierne for simulering af Euler løsning
     Private Sub StartEuler()
-        'Tid = ?
-        'Delta_t = ?
-        'OmegaE_n = ?
-        'ThetaE_n = ?
-        'AlphaE_n = ?
+        'Sat som variabler der kan ændres af bruger
+        Tid = 0
+        Delta_t = txtTidsInverval.Text
+        OmegaE_n = 0
+        ThetaE_n = 0
+        AlphaE_n = -g / Lsnor * Math.Sin(ThetaMax)
     End Sub
 
     'Beregner snorens vinkel for Euler løsning
@@ -159,8 +160,9 @@
     'Knaptryk for stop af vilkårlig simulering
     Private Sub btnStop_Click(sender As Object, e As EventArgs) Handles btnStop.Click
         'Stop simuleringen
-
+        Reset()
     End Sub
+
 
 End Class
 
