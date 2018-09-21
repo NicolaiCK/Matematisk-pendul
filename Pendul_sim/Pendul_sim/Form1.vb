@@ -115,7 +115,7 @@
         Tid = 0
         Delta_t = txtTidsInverval.Text
         OmegaE_n = 0
-        ThetaE_n = 0
+        ThetaE_n = ThetaMax
         AlphaE_n = -g / Lsnor * Math.Sin(ThetaMax)
     End Sub
 
@@ -123,20 +123,24 @@
     Private Sub BeregnThetaEuler()
         'Beregner vinkel, vinkelhastighed og vinkelacceleration for n+1
         'ud fra n-værdier
-        'OmegaE_n1 = ?
-        'ThetaE_n1 = ?
-        'AlphaE_n1 = ?
+        OmegaE_n1 = OmegaE_n + AlphaE_n * Delta_t
+        ThetaE_n1 = ThetaE_n + OmegaE_n * Delta_t
+        AlphaE_n1 = -g / Lsnor * Math.Sin(ThetaE_n1)
+
         'Sætter n-værdier = n+1 værdierne
-        'OmegaE_n = ?
-        'ThetaE_n = ?
-        'AlphaE_n = ?
+
+        OmegaE_n = OmegaE_n1
+        ThetaE_n = ThetaE_n1
+        AlphaE_n = AlphaE_n1
     End Sub
 
     'Beregner snorens vinkel for Euler løsning
     Private Sub btnStartEuler_Click(sender As Object, e As EventArgs) Handles btnStartEuler.Click
         'Stop nuværende simulationer
-
+        TimerEuler.Enabled = False
+        TimerExact.Enabled = False
         'Indlæs værdierne fra tekstfelterne
+
 
         'Sæt startværdierne
 
