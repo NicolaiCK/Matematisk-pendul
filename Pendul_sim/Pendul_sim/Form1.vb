@@ -77,7 +77,7 @@
 
     'Beregner snorens vinkel for exact løsning
     Private Sub BeregnThetaExact()
-        'ThetaX = ?
+        ThetaX = ThetaMax * Math.Cos(Math.Sqrt(g / Lsnor) * Tid)
     End Sub
 
     'Kaldes hver gang der er gået Delta_t sec og beregner positionerne for
