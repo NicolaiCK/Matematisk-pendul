@@ -28,8 +28,8 @@ Partial Class Form1
         Me.btnStartEuler = New System.Windows.Forms.Button()
         Me.txtTidsInverval = New System.Windows.Forms.TextBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
-        Me.shpLod = New Microsoft.VisualBasic.PowerPacks.OvalShape()
         Me.shpSnor = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.shpLod = New Microsoft.VisualBasic.PowerPacks.OvalShape()
         Me.TimerExact = New System.Windows.Forms.Timer(Me.components)
         Me.TimerEuler = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
@@ -78,12 +78,6 @@ Partial Class Form1
         Me.ShapeContainer1.TabIndex = 4
         Me.ShapeContainer1.TabStop = False
         '
-        'shpLod
-        '
-        Me.shpLod.Location = New System.Drawing.Point(432, 185)
-        Me.shpLod.Name = "shpLod"
-        Me.shpLod.Size = New System.Drawing.Size(75, 70)
-        '
         'shpSnor
         '
         Me.shpSnor.Name = "shpSnor"
@@ -91,6 +85,18 @@ Partial Class Form1
         Me.shpSnor.X2 = 337
         Me.shpSnor.Y1 = 216
         Me.shpSnor.Y2 = 239
+        '
+        'shpLod
+        '
+        Me.shpLod.Location = New System.Drawing.Point(432, 185)
+        Me.shpLod.Name = "shpLod"
+        Me.shpLod.Size = New System.Drawing.Size(50, 50)
+        '
+        'TimerExact
+        '
+        '
+        'TimerEuler
+        '
         '
         'Form1
         '

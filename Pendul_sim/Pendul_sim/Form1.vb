@@ -88,7 +88,7 @@
         Dim Pvi As Point  'Vindueskoordinat i heltal
         Tid += Delta_t 'Forøger den aktuelle tid med tidsinterval
         'Verdenskoordinaterne for enden af snoren
-
+        BeregnThetaExact()
         'Vindueskoordinaterne for enden af snoren
 
         'Vindueskoordinaterne for loddet
