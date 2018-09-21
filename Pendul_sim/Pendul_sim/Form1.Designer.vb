@@ -32,11 +32,11 @@ Partial Class Form1
         Me.shpLod = New Microsoft.VisualBasic.PowerPacks.OvalShape()
         Me.TimerExact = New System.Windows.Forms.Timer(Me.components)
         Me.TimerEuler = New System.Windows.Forms.Timer(Me.components)
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Vægt = New System.Windows.Forms.Label()
-        Me.txtVægt = New System.Windows.Forms.TextBox()
+        Me.txtTheta_max = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtLsnor = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnStartExact
@@ -68,7 +68,7 @@ Partial Class Form1
         '
         'txtTidsInverval
         '
-        Me.txtTidsInverval.Location = New System.Drawing.Point(363, 43)
+        Me.txtTidsInverval.Location = New System.Drawing.Point(22, 214)
         Me.txtTidsInverval.Name = "txtTidsInverval"
         Me.txtTidsInverval.Size = New System.Drawing.Size(100, 22)
         Me.txtTidsInverval.TabIndex = 3
@@ -103,60 +103,59 @@ Partial Class Form1
         'TimerEuler
         '
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(58, 280)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(51, 17)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Label1"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(22, 265)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(30, 23)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "+"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(22, 294)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(30, 23)
-        Me.Button2.TabIndex = 7
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'Vægt
         '
         Me.Vægt.AutoSize = True
-        Me.Vægt.Location = New System.Drawing.Point(19, 239)
+        Me.Vægt.Location = New System.Drawing.Point(19, 194)
         Me.Vægt.Name = "Vægt"
         Me.Vægt.Size = New System.Drawing.Size(81, 17)
         Me.Vægt.TabIndex = 8
-        Me.Vægt.Text = "Vægt af lod"
+        Me.Vægt.Text = "Tidsinterval"
         '
-        'txtVægt
+        'txtTheta_max
         '
-        Me.txtVægt.AcceptsReturn = True
-        Me.txtVægt.Location = New System.Drawing.Point(129, 275)
-        Me.txtVægt.Name = "txtVægt"
-        Me.txtVægt.Size = New System.Drawing.Size(100, 22)
-        Me.txtVægt.TabIndex = 9
+        Me.txtTheta_max.AcceptsReturn = True
+        Me.txtTheta_max.Location = New System.Drawing.Point(22, 272)
+        Me.txtTheta_max.Name = "txtTheta_max"
+        Me.txtTheta_max.Size = New System.Drawing.Size(100, 22)
+        Me.txtTheta_max.TabIndex = 9
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(22, 249)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(73, 17)
+        Me.Label1.TabIndex = 10
+        Me.Label1.Text = "Max vinkel"
+        '
+        'txtLsnor
+        '
+        Me.txtLsnor.AcceptsReturn = True
+        Me.txtLsnor.Location = New System.Drawing.Point(22, 333)
+        Me.txtLsnor.Name = "txtLsnor"
+        Me.txtLsnor.Size = New System.Drawing.Size(100, 22)
+        Me.txtLsnor.TabIndex = 11
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(22, 313)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(90, 17)
+        Me.Label2.TabIndex = 12
+        Me.Label2.Text = "Snor længde"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.txtVægt)
-        Me.Controls.Add(Me.Vægt)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.txtLsnor)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.txtTheta_max)
+        Me.Controls.Add(Me.Vægt)
         Me.Controls.Add(Me.txtTidsInverval)
         Me.Controls.Add(Me.btnStartEuler)
         Me.Controls.Add(Me.btnStop)
@@ -178,9 +177,9 @@ Partial Class Form1
     Friend WithEvents shpSnor As PowerPacks.LineShape
     Friend WithEvents TimerExact As Timer
     Friend WithEvents TimerEuler As Timer
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents Vægt As Label
-    Friend WithEvents txtVægt As TextBox
+    Friend WithEvents txtTheta_max As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents txtLsnor As TextBox
+    Friend WithEvents Label2 As Label
 End Class
