@@ -88,6 +88,8 @@
         Tid += Delta_t 'Forøger den aktuelle tid med tidsinterval
         'Verdenskoordinaterne for enden af snoren
         BeregnThetaExact()
+        Pve.X = BeregnX(ThetaX)
+
         'Vindueskoordinaterne for enden af snoren
 
         'Vindueskoordinaterne for loddet
@@ -136,15 +138,15 @@
     'Beregner snorens vinkel for Euler løsning
     Private Sub btnStartEuler_Click(sender As Object, e As EventArgs) Handles btnStartEuler.Click
         'Stop nuværende simulationer
-        TimerEuler.Enabled = False
-        TimerExact.Enabled = False
+        TimerExact.Stop()
+        TimerEuler.Stop()
         'Indlæs værdierne fra tekstfelterne
-
-
+        TidsInterval = txtTidsInverval.Text
         'Sæt startværdierne
-
+        StartEuler()
         'Sæt timerens interval og start simuleringen
-
+        TimerEuler.Interval = TidsInterval
+        TimerEuler.Start()
     End Sub
 
     'Kaldes hver gang der er gået Delta_t sec og beregner positionerne for
