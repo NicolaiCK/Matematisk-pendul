@@ -29,6 +29,18 @@
     Dim TidsInterval As Integer = 20 'Tidsinterval for timertick i millisekunder
     Dim Delta_t As Single = TidsInterval / 1000 'Delta tid i sekunder
 
+    'Brug Paint på snor og lod med dette i stedet for shapes fra PowerPacks
+    Dim SnorP1 As Point     'Snor startpunkt
+    Dim SnorP2 As Point     'Snor slutpunkt
+    Dim LodP1 As Point      'Lod position
+    Dim LodWidth As Integer
+    Dim LodHeight As Integer
+    Public P_image                  'Bitmap, der tegnes på denne. Defineres senere
+    Public P_Graphics As Graphics   'Giver adgang til at tegne
+    Dim MyPen As New Pen(Color.Black, 3)     'Pen der tegnes med. Farve og tykkelse kan ændres senere
+    Dim MyBrush As New SolidBrush(Color.Red) 'Pensel, der udfyldes med. Farve kan ændres senere
+
+
     'Sætter alle fysiske størrelser på plads for lod, snor og transformation
     Private Sub LodStart()
         SaetTransformationsVariabler(True, XveV, XveH, YveB, YveT, XviV, XviH, YviB, YviT)
